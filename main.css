@@ -1,0 +1,132 @@
+body {
+  padding-top: 50px;
+  text-align: center;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.starter-template img {
+	height:165px;
+	display: inline;
+}
+
+body {
+	background: #1a2426;
+	font-size: 16px;
+}
+
+p, span, div, li, a, input, button {
+	font-family: ARVO, serif;
+}
+
+h1, h2 {
+	font-family: LOBSTER, cursive;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+header h1 {
+	color: #f7f7f7;
+	font-size: 6em;
+	text-align: center;
+	-webkit-transform: rotate(-5deg); 
+	-moz-transform: rotate(-5deg);
+	margin: 20px auto;	
+}
+
+#fetch {
+	margin: auto;
+	text-align: center;
+	max-width: 500px;
+}
+
+#term {
+	padding: 10px;
+	font-size: 1.6em;
+	margin: 10px auto;
+	width: 80%;
+}
+
+#search {
+	background: #e3e3e3;
+	border: 1px solid #bbb;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	-moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	-ms-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	-o-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	box-shadow: inset 0 0 1px 1px #f6f6f6;
+	color: #333;
+	line-height: 1;
+	font-size: 1.6em;
+	padding: 8px 0 9px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	display: block;
+	margin: 10px auto;
+	width: 80%;
+}
+
+#search:hover {
+	background: #d9d9d9;
+	-webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+	-moz-box-shadow: inset 0 0 1px 1px #eaeaea;
+	-ms-box-shadow: inset 0 0 1px 1px #eaeaea;
+	-o-box-shadow: inset 0 0 1px 1px #eaeaea;
+	box-shadow: inset 0 0 1px 1px #eaeaea;
+	color: #222;
+	cursor: pointer; 
+}
+
+#search:active {
+	background: #d0d0d0;
+	-webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+	-moz-box-shadow: inset 0 0 1px 1px #e3e3e3;
+	-ms-box-shadow: inset 0 0 1px 1px #e3e3e3;
+	-o-box-shadow: inset 0 0 1px 1px #e3e3e3;
+	box-shadow: inset 0 0 1px 1px #e3e3e3;
+	color: #000;
+}
+
+#poster {
+	text-align: center;
+}
+
+#thePoster {
+	display: inline-block;
+	max-width: 90%;
+	margin: 20px auto;
+	-webkit-box-shadow: 1px 1px 20px #000000;
+	-moz-box-shadow: 1px 1px 20px #000000;
+	box-shadow: 1px 1px 20px #000000;
+}
+
+.loading {
+	color: #f7f7f7;
+	margin: 20px auto;
+	font-size: 3em;
+}
+
+footer {
+	text-align: center;
+	margin: 20px auto;
+}
+
+footer p, footer a {
+	color: #f7f7f7;
+}
+
+.twitter-follow-button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
