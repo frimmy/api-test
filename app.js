@@ -9,6 +9,8 @@ $(function(){
 
 	});
 
+	var api_key = "0b3385b006ff4f8013eaff2b15006edb";
+	var baseimg = "http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342";
 
 	//function definition 
 	var getPoster = function(){
@@ -29,22 +31,23 @@ $(function(){
 			//They must have entered a value, carry on with API call, first display a loading message to notify the user of activity
 			$('#poster').html("<h2 class='loading'>Your poster is on its way!</h2>");
 
-			$.getJSON("https://api.themoviedb.org/3/search/movie?api_key=0b3385b006ff4f8013eaff2b15006edb&query=" + escape(film) + "&callback=?",
+			$.getJSON("https://api.themoviedb.org/3/search/movie?query=" + escape(film) + "&api_key=0b3385b006ff4f8013eaff2b15006edb&callback=?",
 				function(json) {
 				//print returned json object to familiarize with API data structure
-				 console.log(json);
+				// console.log(json);
+				// console.log(json.results[0].poster_path);
 
 				//TMDb is nice enough to return a message if nothing was found, so we can base our if statement on this info
 
-					if (json != "Nothing found.") {
+					if (json.total_results) {
 
 						//Display the poster and a message announcing the result
 
-						$('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + json[0].posters[0].image.url + ' />');
+						$('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + baseimg + json.results[0].poster_path + ' />');
 					} else {
-						$.getJSON("https://api.themoviedb.org/3/search/movie/search/Goonies", 
+						$.getJSON("http://api.themoviedb.org/3/search/movie?api_key=0b3385b006ff4f8013eaff2b15006edb&query=goonies", 
 							function(json){
-								$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search. Perhaps you were looking for The Goonies?</h2><img id="thePoster" src='+json[0].postes[0].image.url+'/>');
+								$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search. Perhaps you were looking for The Goonies?</h2><img id="thePoster" src='+baseimg + json.results[0].poster_path+'/>');
 	                    });                 
 	                }
 			});
