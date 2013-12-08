@@ -29,10 +29,10 @@ $(function(){
 			//They must have entered a value, carry on with API call, first display a loading message to notify the user of activity
 			$('#poster').html("<h2 class='loading'>Your poster is on its way!</h2>");
 
-			$.getJSON("https://api.themoviedb.org/3/search/movie/search/" + film + "?api_key=0b3385b006ff4f8013eaff2b15006edb&callback=?",
+			$.getJSON("https://api.themoviedb.org/3/search/movie?api_key=0b3385b006ff4f8013eaff2b15006edb&query=" + escape(film) + "&callback=?",
 				function(json) {
 				//print returned json object to familiarize with API data structure
-				// console.log(json);
+				 console.log(json);
 
 				//TMDb is nice enough to return a message if nothing was found, so we can base our if statement on this info
 
