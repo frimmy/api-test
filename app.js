@@ -29,24 +29,24 @@ $(function(){
 			//They must have entered a value, carry on with API call, first display a loading message to notify the user of activity
 			$('#poster').html("<h2 class='loading'>Your poster is on its way!</h2>");
 
-			$.getJSON("http://api.themoviedb.org/2.1/Movie.search/en/json/23afca60ebf72f8d88cdcae2c4f31866/" + film + "?callback=?", function(json) {
-
+			$.getJSON("https://api.themoviedb.org/3/search/movie/search/" + film + "?api_key=0b3385b006ff4f8013eaff2b15006edb&callback=?",
+				function(json) {
 				//print returned json object to familiarize with API data structure
-				console.log(json);
+				// console.log(json);
 
 				//TMDb is nice enough to return a message if nothing was found, so we can base our if statement on this info
 
-				if (json != "Nothing found.") {
+					if (json != "Nothing found.") {
 
-					//Display the poster and a message announcing the result
+						//Display the poster and a message announcing the result
 
-					$('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + json[0].posters[0].image.url + ' />');
-				} else {
-					$.getJSON("http://api.themoviedb.org/2.1/Movie.search/en/json/23afca60ebf72f8d88cdcae2c4f31866/goonies?callback=?", function(json){
-
-						$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search. Perhaps you were looking for The Goonies?</h2><img id="thePoster" src='+json[0].postes[0].image.url+'/>');
-					});
-				}
+						$('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + json[0].posters[0].image.url + ' />');
+					} else {
+						$.getJSON("https://api.themoviedb.org/3/search/movie/search/Goonies", 
+							function(json){
+								$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search. Perhaps you were looking for The Goonies?</h2><img id="thePoster" src='+json[0].postes[0].image.url+'/>');
+	                    });                 
+	                }
 			});
 		}
 
