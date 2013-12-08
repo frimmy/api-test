@@ -31,7 +31,7 @@ $(function(){
 			//They must have entered a value, carry on with API call, first display a loading message to notify the user of activity
 			$('#poster').html("<h2 class='loading'>Your poster is on its way!</h2>");
 
-			$.getJSON("https://api.themoviedb.org/3/search/movie?query=" + escape(film) + "&api_key=0b3385b006ff4f8013eaff2b15006edb&callback=?",
+			$.getJSON("https://api.themoviedb.org/3/search/movie?query=" + escape(film) + "&api_key=" + api_key + "&callback=?",
 				function(json) {
 				//print returned json object to familiarize with API data structure
 				// console.log(json);
@@ -45,7 +45,7 @@ $(function(){
 
 						$('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + baseimg + json.results[0].poster_path + ' />');
 					} else {
-						$.getJSON("http://api.themoviedb.org/3/search/movie?api_key=0b3385b006ff4f8013eaff2b15006edb&query=goonies", 
+						$.getJSON("http://api.themoviedb.org/3/search/movie?query=goonies&api_key=" + api_key, 
 							function(json){
 								$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search. Perhaps you were looking for The Goonies?</h2><img id="thePoster" src='+baseimg + json.results[0].poster_path+'/>');
 	                    });                 
