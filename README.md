@@ -9,4 +9,10 @@ Unfortunately, it was updated to version 3.0 in October rendering the tutorial o
 
 ##You can check out the working project [here](http://frimmy.github.io/api-test "TMDb Api project")
 
-Let me know if you have suggestions for refactoring, cheers
+Special thanks to [Adrien](https://github.com/adrienp "His github") for help on better submission event handling!
+
+Feel free to fork/make pull requests for refactoring.
+
+I'd like to turn this project into a tutorial in the near future, let me know if you'd like to help @ [my email](mailto:adrian.frimpong@gmail.com?Subject=Api%20test%20tutorial-help)
+
+Cheers!
