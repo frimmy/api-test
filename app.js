@@ -56,11 +56,5 @@ $(function(){
 		return false;	
 	}
 
-	$('#search').click(getPoster);
-	$('#term').keyup(function(event) {
-
-		if(event.keyCode == 13) {
-			getPoster();
-		}
-	});
+	$('#fetch form').on('submit', getPoster);
 });
