@@ -10,7 +10,7 @@ $(function(){
 	});
 
 	var api_key = "0b3385b006ff4f8013eaff2b15006edb";
-	var baseimg = "http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342";
+	var baseimg = "http://image.tmdb.org/t/p/w342/";
 
 	//function definition 
 	var getPoster = function(){
