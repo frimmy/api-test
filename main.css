@@ -22,6 +22,7 @@ p, span, div, li, a, input, button {
 }
 
 h1, h2 {
+	color:white;
 	font-family: LOBSTER, cursive;
 }
 
